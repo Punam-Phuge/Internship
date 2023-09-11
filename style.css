@@ -1,0 +1,33 @@
+/* By selecting Tag */
+h2,h3{
+    font-family:'poppins',sans-serif;
+}
+
+/* By selecting Class */
+/* .Programs-Heading{
+    color: rgb(56, 56, 189);
+   
+} */
+.fb-container{
+
+    display:flex;
+    padding: 10px;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content:center;
+    color: rgb(56, 56, 189);
+
+
+}
+
+
+/*Universal Selector*/
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Group Selector*/
+
+
+/*Descendant Space*/
