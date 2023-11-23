@@ -1,12 +1,12 @@
 
 import PrimeVideo from "./components/PrimeVideo";
-import MovieDetails from "./components/SeeMore.js";
+import MovieDetails from "./components/SeeMore/SeeMore.js";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./App.css";
-import TYpeOfMovieCards from "./components/Categories.js";
-import Movies from "./components/Movies.js";
+import TYpeOfMovieCards from "./components/Categories/Categories.js";
+import Movies from "./components/Movies/Movies.js";
 
 
 
@@ -128,6 +128,7 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<PrimeVideo moviesList={moviesList} />}>
             </Route>
+          
             <Route path="/Movies" element={<Movies moviesList={moviesList} />}></Route>
             <Route path="/MovieDetails" element={<MovieDetails moviesList={moviesList} />}> </Route>
             <Route path="/Categories" Component={TYpeOfMovieCards}> </Route>

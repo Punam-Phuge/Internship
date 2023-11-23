@@ -2,7 +2,7 @@
 import MoviesSlider from "../MoviesSlider";
 import { Link } from "react-router-dom";
 import Navbarcomp from "../Navvbar/Navbarcomp";
-import { Footer } from "../Footer";
+import { Footer } from "../Footer/Footer";
 import  Image3 from "../images/image3.png";
 import {
   PrimeVideoContainer,
