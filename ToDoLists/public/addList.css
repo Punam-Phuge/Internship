@@ -1,0 +1,40 @@
+button.create-button{
+    margin-bottom: 10px; margin-top: 10px; position: relative;
+    border-radius:10px;
+    border: 1px solid gray;
+    background-color: #a683e3;
+    color: #e4e9fd;
+    font-size: 14px;
+    padding: 2%;
+    min-height: 30px;
+    min-width: 50px;
+}
+
+.create-button:hover {
+    background-color: #e4e9fd;
+    color: #504661;
+  }
+
+
+  label {
+    color: #504661;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+    width: 30%;
+  }
+  label:after { content: ": " }
+
+  .listname{
+    text-align: left;
+    margin-left: 10px;
+    margin-right:10px;
+    min-width: 150px;
+    width:50%;
+  }
+
+  .create-list-container{
+    min-width: 300px;
+    max-width: 500px;
+    margin-bottom: 20px; 
+    background: transparent;
+  }

@@ -1,0 +1,24 @@
+<html>
+ 
+<head>
+    <title> ToDo App </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet"/>
+    <link href="/addList.css" rel="stylesheet"/>
+    
+</head><body>
+
+  <div class="box create-list-container">
+    <form class="item" action="/AddList" method="post">
+      <div style="background: transparent; ">
+      <label for="newList"> Name </label>
+    
+      <input type="text" name="newList" placeholder="Enter name of new list to Create." autocomplete="on" class="listname"/>
+
+      <button type="submit"  class="create-button" name="list" value="">Submit</button>
+    </div>
+    </form>
+    
+  </div> 
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title> ToDo App </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet"/>
+    
+</head><body>
+  <div class="box" id="heading">
+    <h1>
+        Lists 
+    </h1>
+  </div>
+  <div class="grid-container">
+  <% for(let item of listTitles) { %>
+  
+    <form  action="/element/<%=item._id %>" method="get">
+      <div class="divbutton">
+
+        <button type="submit" class="btnlist"   value="<%=item._id %>" ><%= item.name %></button> 
+      </div>
+    </form>
+ 
+     <% } %>
+    </div>
+    <!-- <div style="display:flex; justify-content:flex-end; width:100%; padding:0;"> -->
+     <form class="item" action="/AddList" method="get">
+      <button type="submit" class="btnadd fixed-button-bottom-right"  value="">+</button>
+    </form>
+  <!-- </div> -->
+</body>
+</html>

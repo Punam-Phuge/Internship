@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title> ToDo App </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet"/>
+    
+</head><body>
+  <div class="box" id="heading">
+    <h1>
+     <%=Listname%>
+    </h1>
+  </div>
+  <!-- <div class="list-element-box"> -->
+  
+  <div class="box">
+    
+    <% for(let item of Listitems) { %>
+      <form action="/delete" method="POST">
+        <div class="item">
+          <input type="checkbox" name="item" value="<%= item._id %>" onChange="this.form.submit()">
+          <p>
+            <%= item.name %>
+          </p>
+        </div>
+      </form>
+    <% } %>
+   
+        <form class="item" action="/element/<%=ListID%>" method="post">
+          <input type="text" name="newList" placeholder="New Item" autocomplete="off" />
+          <button type="submit" name="list" value="" >+</button>
+        </form>
+  </div>
+
+  <div style="display:flex; justify-content:flex-end; width:100%; padding:0;">
+    <form class="item" action="/displayList" method="get">
+     <button type="Submit" class=" fixed-button-top-left btnback" style="width:auto"  value="">&#8592;</button>
+   </form>
+ </div>
+
+</body>
+</html>
