@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser =  require('body-parser');
 var mongoose = require('mongoose');
+var Schema = require('mongoose');
+const { ObjectId } = require('mongodb');
 
 const app = express();
 const port = 4000;
@@ -16,22 +18,17 @@ const listSchema = new mongoose.Schema({
     items:[{name:String}]
 });
 
+
 const List = mongoose.model("List", listSchema);
 
 
-const item1 = new List({
-  name: "Welcome to ToDo List"
-});
+app.get("/",function(req,res){
 
-const item2 = new List({
-  name: "How are you doing?"
-});
-
-app.get("/displayList",function(req,res){
+//List.insertMany([item3, item4]);
 
     List.find({}).then(function(f){
    
-    res.render("displayList.ejs", { listTitles: f}
+    res.render("Home.ejs", { listTitles: f}
       );
     })
 });
@@ -43,13 +40,18 @@ app.get("/AddList",function(req,res){
 
 app.post("/AddList", function (req, res) {
   const list = req.body.newList;
-
+  const item1 = "Welcome to ToDo List";
+  const item2 = "How are you doing?";
+ 
+  
   const newList = new List({
-    name: list
+    name: list,
+    items:[{name:item1},{name:item2}]
+    
   });
   newList.save();
 
-  res.redirect('/displayList')
+  res.redirect('/')
 });
 
 
@@ -80,6 +82,7 @@ app.get("/element/:id", function (req, res) {
      List.findByIdAndUpdate(id, listElement).exec().then(function (doc){
       res.redirect('/element/'+ doc._id )
      });
+  
   });
 
 
