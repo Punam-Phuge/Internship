@@ -1,0 +1,48 @@
+* {
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.full{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.wordmark{
+    text-align: center;
+    font-size: 60px;
+    color:  #1DA1F2;
+}
+.logo{
+        font-family: "Anta",sans-serif;
+        font-weight: 400;
+        font-size: normal;
+}
+.swap a{
+    text-decoration: none;
+}
+
+.profile_icon{
+    bottom:20px;
+   
+}
+.left_nav_section{
+    height:100vh;
+    top: 0px;
+}
+.happening-box{
+    background-color: #efefef;
+    border-radius: 20px;
+
+}
+.container-xxl{
+ 
+    color: white;
+}
+.background{
+    background-color: black;
+}

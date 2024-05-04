@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+<section class="tweets-section p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.pixground.com/wp-content/uploads/2023/06/Blue-Abstract-Background-4K-Wallpaper-1536x864.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text mb-1">Welcome!</p>
+                      <h2 class="card-title" ><%=user.name%></h2>
+                     
+                   
+                    </div>
+                  </div>
+            </div>
+            <div class="col-8">
+                
+                  <form action="tweets" method="post" class="row g-3 justify-content-center">
+                    <div class="col-md-12">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="tweets" rows="3" placeholder="What would you like to share today?"></textarea>
+                      </div>
+                    
+                    <div class="col-12 d-flex  justify-content-end">
+                      <button type="submit" class="btn btn-primary">Share</button>
+                    </div>
+                  </form>
+                  <% for(let item of tweets) { %>
+                  <div class="mt-5"></div>
+                  <div class="card mb-4" >
+                    <div class="card-body">
+                      <h5 class="card-title"><%=user.name%></h5>
+                      <p class="card-text"><%=item.tweet%></p>
+                    </div>
+                  </div>
+                  <% } %>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('partials/footer') %>
